@@ -1,0 +1,14 @@
+<header class="w-full absolute top-0 left-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+        <a href="#" class="text-lg font-semibold tracking-wide font-title transition" [style.color]="'var(--primary)'">Douglas.dev</a>
+        <div class="flex items-center gap-4">
+            <a href="https://wa.me/5531986508649?text=Olá%20Douglas,%20vim%20pelo%20seu%20portfólio!" target="_blank" class="px-4 py-2 text-sm border-3 transition rounded-lg" [style.borderColor]="'var(--primary)'" [style.color]="'var(--primary)'" [style.fontSize]="'18px'" [style.fontWeight]="'400'">Contato</a>
+            <a *ngIf="!themeService.isDark" href="#" [style.color]="'var(--text)'" class="w-10 h-10 flex items-center justify-center rounded-lg transition duration-300 hover:scale-110 hover:bg-(--border)" (click)="toggleTheme(); $event.preventDefault()">
+                <svg lucideMoon class="w-6 h-6" [attr.color]="'var(--text)'" [strokeWidth]="1.5"></svg>
+            </a>
+            <a *ngIf="themeService.isDark" href="#" [style.color]="'var(--text)'" class="w-10 h-10 flex items-center justify-center rounded-lg transition duration-300 hover:scale-110 hover:bg-(--border)/60" (click)="toggleTheme(); $event.preventDefault()">
+                <svg lucideSun class="w-6 h-6" [attr.color]="'var(--text)'" [strokeWidth]="1.5"></svg>
+            </a>
+        </div>
+    </div>
+</header>

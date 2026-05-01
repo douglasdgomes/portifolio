@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+:root {
+  --bg: #ffffff;
+  --text: #111827;
+  --card: #f3f4f6;
+  --bgicon: #16a34a;
+  --coloricon: #f9fafb;
+  --primary: #16a34a;
+  --border: #f3f4f6;
+  --font-body: "Poppins", sans-serif;
+  --font-title: "Orbitron", sans-serif;
+}
+
+.dark {
+  --bg: #0f172a;
+  --text: #f9fafb;
+  --card: #1f2937;
+  --bgicon: #22c55e;
+  --coloricon: #f9fafb;
+  --border: #374151;
+  --primary: #22c55e;
+}
+
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.font-title {
+  font-family: var(--font-title);
+}
